@@ -1,106 +1,134 @@
-@import "compass/css3";
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC');
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
 
-*, *::before, *::after {
+body{
   margin: 0;
   padding: 0;
-  @include box-sizing(border-box);
-}
-
-body {
-  background-image: url("https://static1.squarespace.com/static/55089605e4b076f89f21acb6/t/5a5e213d53450ab8996facc8/1516118360894/nature-portfolio-ikhals.jpg?format=2500w");
-font-family: 'Playfair Display SC', serif;
+  background-image:url("https://static1.squarespace.com/static/55089605e4b076f89f21acb6/t/5a5e213d53450ab8996facc8/1516118360894/nature-portfolio-ikhals.jpg?format=2500w");
   background-position: center;
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
+
 }
 
-.profile {
+.profile-card{
+  border-radius: 20px;
+  width: 600px;
+  height: 350px;
+  background-color: white;
+  display: flex;
+  flex: 1;
   position: absolute;
-  height: 200px;
-  width: 200px;
-  @include border-radius(50%);
-  top: 0; right: 0; bottom: 0; left: 0;
+  top: 50%;
+  left: 50%;
+  margin-right: -50%;
+  transform: translate(-50%, -50%);
+  margin-bottom: 70px;}
+
+.profile-card header{
+  border-right: 1px solid transparent ;
+  width: 400px;
+
+}
+
+.profile-card img{
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+  display: flex;
   margin: auto;
-
-  img {
-    height: 100%;
-    width: 100%;
-    @include border-radius(50%);
-    position:relative;
-    transition: 1s ease;
+  margin-top: 40px;
+  border: 8px solid transparent;
+  transition: .4s;
   }
 
-  .overlay {
-    color:#fff;
-    position: absolute;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background: rgba(0,0,0, 0.5);
-    @include border-radius(50%);
-    text-align: center;
-    opacity: 0;
-    @include transition(opacity 500ms);
-    overflow: hidden;
-
-    a {
-      display: inline-block;
-      color: white;
-      margin-top: calc(50% - 15px);
-      margin-right: 5px;
-
-      &:first-child:hover {
-        color: #3b5998;
-      }
-
-      &:nth-child(2):hover {
-        color: #4099ff;
-      }
-
-      &:last-child:hover {
-        color: #3f729b;
-      }
-    }
-  }
-  h2{
-    font:bold 2.4rem/1 'IM Fell English SC', serif;
-    font-size: 15vh;
-    color:#000;
-  }
-  h3{
-    font-size:5vh;
-    color:white;
-  }
-  h4{
-    color:#000;
-    font-size:6vh;
-    margin-top:20vh;
-    margin-bottom:50vh;
-  }
-  &:hover {
-    .overlay {
-      opacity: 1;
-    }
-  }
-
-  .profileinfo {
-    margin-top: 10%;
-    text-align: center;
-    mrgin-bottom: 50%;
-  }
+.profile-card img:hover{
+  border: 8px solid #000 ;
 }
 
-@media(max-width:568px) {.parallax
-   { background-attachment: scroll;
-    }
+
+.profile-card h1{
+  font-family: 'Playfair Display SC', serif;
+  font-size: 22px;
+  color: #000 ;
+  text-align: center;
 }
-.home{
-  color:#000;
+
+.profile-card h2{
+  font-family: 'Playfair Display SC', serif;
+  font-size: 16px;
+  text-align: center;
 }
-.home:hover{
-  color:#ccc;
+
+.profile-bio{
+  border-radius: 0 20px 20px 0;
+  background-color: #ccc ;
+  display: flex;
+  flex-direction: column;
+  flex: 1:
+}
+
+.profile-bio p{
+  color: black;
+  font:bold 2.4rem/1 'IM Fell English SC', serif;
+  font-size: 20px;
+  text-align: center;
+  margin: 30px;
+  margin-top: 70px;
+}
+
+a{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 60px;
+  margin-top: 40px;
+
+}
+a{
+  display: flex;
+  color: white;
+  font-size: 30px;
+  transition: .4s;
+  font:bold 2.4rem/1 'IM Fell English SC', serif;
+
+}
+
+a:hover{
+  color: #000 ;
+  transform: scale(1.2);
+}
+
+ul{
+  list-style-type: none;
+  display: flex;
+}
+
+ul li{
+
+  margin: 30px;
+}
+
+.fa-instagram{
+ color: white ;
+ transition: .4s;
+  }
+.fa-instagram:hover{
+  color: #e53935 ;
+}
+
+.fa-facebook-square{
+ color: white ;
+  transition: .4s;
+}
+.fa-facebook-square:hover{
+  color: #e53935 ;
+}
+.fa-linkedin{
+  color: white;
+  transition: .4s;
+}
+.fa-linkedin:hover{
+  color: #e53935 ;
 }
