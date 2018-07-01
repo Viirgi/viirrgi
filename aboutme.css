@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC');
+
 @import url('https://fonts.googleapis.com/css?family=Montserrat');
 
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
@@ -99,37 +99,4 @@ a{
 a:hover{
   color: #000 ;
   transform: scale(1.2);
-}
-
-ul{
-  list-style-type: none;
-  display: flex;
-}
-
-ul li{
-
-  margin: 30px;
-}
-
-.fa-instagram{
- color: white ;
- transition: .4s;
-  }
-.fa-instagram:hover{
-  color: #e53935 ;
-}
-
-.fa-facebook-square{
- color: white ;
-  transition: .4s;
-}
-.fa-facebook-square:hover{
-  color: #e53935 ;
-}
-.fa-linkedin{
-  color: white;
-  transition: .4s;
-}
-.fa-linkedin:hover{
-  color: #e53935 ;
 }
