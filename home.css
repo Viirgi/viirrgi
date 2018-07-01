@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC');
+
+@import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
+
+
+/* Tiny reset thingy */
+body,html{margin:0;padding:0;
+font-family: 'Playfair Display SC', serif;}
+
+.wrapper {
+  /* The height needs to be set to a fixed value for the effect to work.
+   * 100vh is the full height of the viewport. */
+  height: 100vh;
+  /* The scaling of the images would add a horizontal scrollbar, so disable x overflow. */
+  overflow-x: hidden;
+  /* Enable scrolling on the page. */
+  overflow-y: auto;
+  /* Set the perspective to 2px. This is essentailly the simulated distance from the viewport to transformed objects.*/
+  perspective: 2px;
+}
+
+.section {
+  /* Needed for children to be absolutely positioned relative to the parent. */
+  position: relative;
+  /* The height of the container. Must be set, but it doesn't really matter what the value is. */
+  height: 100vh;
+
+  /* For text formatting. */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 50px;
+}
+
+.parallax::after {
+  /* Display and position the pseudo-element */
+  content: " ";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+
+  /* Move the pseudo-element back away from the camera,
+   * then scale it back up to fill the viewport.
+   * Because the pseudo-element is further away, it appears to move more slowly, like in real life. */
+  transform: translateZ(-1px) scale(1.5);
+  /* Force the background image to fill the whole element. */
+  background-size: 100%;
+  /* Keep the image from overlapping sibling elements. */
+  z-index: -1;
+}
+
+/* The styling for the static div. */
+.static {
+  background: black;
+}
+
+/* Sets the actual background images to adorable kitties. This part is crucial. */
+.bg1::after {
+  background-image: url("https://static1.squarespace.com/static/55089605e4b076f89f21acb6/t/5a5e213d53450ab8996facc8/1516118360894/nature-portfolio-ikhals.jpg?format=2500w");
+}
+
+*
+{
+  margin: 0;
+  padding: 0;
+}
+
+header{
+  background-image: url(sfondo.jpg);
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+}
+
+
+.row
+{
+  max-width: 1200px;
+  margin: auto;
+}
+
+.hero
+{
+  position:absolute;
+  width:120px;
+  margin-left: 0;
+  margin-top: 0;
+}
+
+
+/*menu*/
+
+
+:root {
+  font-size:0.625em;
+}
+
+
+/*
+Counters
+*/
+
+.menu ol {
+  counter-reset:menu;
+}
+
+
+
+/*
+Regular menu items
+*/
+
+.menu-item a {
+  display:flex;
+  justify-content:flex-start; /*shrink towards text*/
+  color:currentColor;
+  text-decoration:none;
+  padding:0.3rem 0; /* avoid flickin' */
+  order:0;
+  margin-top:10%;
+}
+
+.menu-item a::before { /* dots */
+  content:"";
+  display:block;
+  border-bottom:1px dotted white;
+  position:relative; top:-3px;
+  flex:1 1 auto;
+  margin:0 1rem;
+  order:1;
+}
+
+.menu-item a::after { /* item ids */
+  counter-increment:menu;
+  content:counters(menu, ".");
+  flex:0 0 auto;
+  order:2;
+  transform:rotate(30deg)scale(1.2);
+  text-decoration:underline;
+}
+
+
+
+/*
+Sub menu & items
+*/
+
+.sub-menu {
+  font-size:1.6rem;
+  font-weight:normal;
+}
+
+.sub-menu > li > a {
+  text-indent:0ch; /*
+    Chrome indentS the "dots" elm, i.e. it counts pseudo-elm.
+    FF and Edge indents first non pseudo-elm.
+    Turn it off for consistency.
+  */
+  padding:0.5rem 0 0.5rem 2ch;
+  margin:0;
+}
+
+
+
+/*
+Main menu
+*/
+
+.menu {
+  width:22vw;
+  min-width:20ch;
+  display:flex;
+  flex-flow:column nowrap;
+  font:bold 2.4rem/1 'IM Fell English SC', serif;
+  position:relative;
+}
+
+.menu::before {
+  content:"/";
+  align-self:center;
+  margin-bottom:1rem;
+    transform:rotate(30deg);
+}
+
+.menu::after {
+  content:"/";
+  align-self:center;
+  transform:rotate(30deg);
+  margin-top:1rem;
+}
+
+
+
+/*
+Fx
+*/
+
+.menu { transition:transform 0.3s; }
+.menu:hover { transform:rotate(0); }
+
+.menu::before { transition:transform 0.5s; }
+.menu:hover::before { transform:rotate(0); content:"__"; }
+.menu::after { transition:transform 0.5s; }
+.menu:hover::after { transform:rotate(0); content:"__"; }
+
+.menu .menu-item a::after { transition:transform 0.3s }
+.menu:hover .menu-item a::after { transform:rotate(0) }
+
+.menu:hover > ol > .menu-item { opacity:0.3; }
+
+.menu-item:hover {
+  opacity:1 !important;
+}
+
+.menu-item:hover a::after {
+  text-decoration:none;
+}
+
+.menu-item:hover > a::before {
+  transition:flex-grow 0.3s;
+  width:0; flex-grow:0;
+  transform-origin:center bottom;
+}
+
+/*
+Collapse
+*/
+
+.sub-menu > .menu-item {
+  max-height:1ch;
+  transform:scaleY(0.1);
+  transform-origin:center top;
+  transition:transform 0.2s, max-height 0.5s;
+}
+
+.menu:hover .sub-menu .menu-item {
+  max-height:10em;
+  transform:scaleY(1);
+}
