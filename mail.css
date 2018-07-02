@@ -1,5 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=IM+Fell+English+SC');
-
+@import url('https://fonts.googleapis.com/css?family=Montserrat');
 @import url('https://fonts.googleapis.com/css?family=Playfair+Display+SC');
 
 
@@ -10,11 +10,11 @@
 		height: 100%;
 		width: 100%;
 		background: #000;
-  background: background: -moz-radial-gradient(center, ellipse cover,  #000 40%, #000 100%);
-  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(40%,#000), color-stop(100%,#000)); background: -webkit-radial-gradient(center, ellipse cover,  #000 40%,#000 100%);
-  background: -o-radial-gradient(center, ellipse cover,  #000 40%,#000 100%);
-  background: -ms-radial-gradient(center, ellipse cover,  #000 40%,#bbbbbb 100%);
-  background: radial-gradient(ellipse at center,  #000 40%,#000 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000', endColorstr='#000',GradientType=1 );
+  background: background: -moz-radial-gradient(center, ellipse cover,  #ccc 40%, #ccc 100%);
+  background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop(40%,#ccc), color-stop(100%,#ccc)); background: -webkit-radial-gradient(center, ellipse cover,  #000 40%,#000 100%);
+  background: -o-radial-gradient(center, ellipse cover,  #ccc 40%,#ccc 100%);
+  background: -ms-radial-gradient(center, ellipse cover,  #ccc 40%,#ccc 100%);
+  background: radial-gradient(ellipse at center,  #ccc 40%,#ccc 100%); filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#000', endColorstr='#000',GradientType=1 );
 }
 .contact {
 		position: absolute;
@@ -25,7 +25,8 @@
 		height: 250px;
 		width: 250px;
 		background: #fff;
-    font:bold 2.4rem/1 'IM Fell English SC', serif;
+    font-family: 'Montserrat', sans-serif;
+
 
 		border-radius: 2px;
 		-ms-border-radius: 2px;
@@ -170,7 +171,7 @@
 .contact .envelope .paper a {
 		position: relative;
 		display: block;
-		font-size: 14px;
+		font-size: 10px;
 		margin: 5px;
 		margin-bottom: 0px;
 		text-align: center;
@@ -194,8 +195,8 @@
 .contact .envelope .paper a.mail .i {
 		position: absolute;
 		top: 0px;
-		left: 17px;
+		left: 14px;
 		display: inline-block;
-		font-size: 15px;
+		font-size: 7px;
 		font-weight: bold;
 }
