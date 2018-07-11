@@ -1,39 +1,180 @@
+<!DOCTYPE html>
+<html lang="en" >
+
 <head>
-<link href="https://fonts.googleapis.com/css?family=Playfair+Display+SC" rel="stylesheet">
-  <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8">
+  <title>Pagina Personale</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <link rel='stylesheet prefetch' href='https://www.w3schools.com/lib/w3.css'>
+<link rel='stylesheet prefetch' href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css'>
+
+      <link rel="stylesheet" href="css/style.css">
+
+
 </head>
 
+<body>
 
-<main class="wrapper">
-  <section class="section parallax bg1">
-<h1>Viirrgi</hi>
-  </section>
-  <section class="section static">
-      <header>
-    <div class="row">
-      <div class="logo">
-      </div>
+  <link rel="stylesheet" href="">
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <ul class="w3-navbar" id="myNavbar">
+    <li><a href="#" class="w3-padding-large">VIIRRGI</a></li>
+    <li class="w3-hide-small w3-right">
+      <a href="#contact" class="w3-padding-large">CONTACT</a>
+    </li>
+    <li class="w3-hide-small w3-right">
+      <a href="#portfolio" class="w3-padding-large">GALLERY</a>
+    </li>
+    <li class="w3-hide-small w3-right">
+      <a href="#about" class="w3-padding-large">ABOUT</a>
+    </li>
+  </ul>
+</div>
+
+<!-- First Parallax Image with Logo Text -->
+<div class="bgimg-1 w3-opacity w3-display-container">
+  <div class="w3-display-middle" style="white-space:nowrap;">
+    <h1 class="w3-center w3-padding-xlarge w3-black w3-xlarge w3-wide w3-animate-opacity">VIIRRGI <span class="w3-hide-small"></span></h1>
+  </div>
+</div>
+
+<!-- Container (About Section) -->
+<div class="w3-content w3-container w3-padding-64" id="about">
+  <h2 class="w3-center">ABOUT ME</h2>
+  <p class="w3-center"><em>Some lines about me :)</em></p>
+  <p>Hi! My name is Virginia Braut. I currently study design at Politecnico in Milan. In my free time I love to draw, sing and take long walks in Nature.</p>
+  <!--  Profile Picture and Description  -->
+  <div class="w3-row">
+    <div class="w3-col m6 w3-center w3-section">
+      <img src="data:image/jpeg;base64,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" id="profile" class="w3-circle" alt="Photo of Me">
     </div>
 
-        <div>
-<nav class="menu">
-  <ol>
-    <li class="menu-item"><a href="aboutme.html">About me</a></li>
-    <li class="menu-item">
-      <a href="#0">Gallery</a>
-      <ol class="sub-menu">
-        <li class="menu-item"><a href="drawings.html">Drawings</a></li>
-        <li class="menu-item"><a href="photos.html">Photos</a></li>
-        <li class="menu-item"><a href="https://www.behance.net/virginiabr7103">Behance</a></li>
-      </ol>
-    </li>
-    <li class="menu-item">
-      <a href="#0">Contacts</a>
-      <ol class="sub-menu">
-        <li class="menu-item"><a href="https://www.instagram.com/viirrgi/?hl=it">Instagram</a></li>
-        <li class="menu-item"><a href="mail.html">Send me an Email</a></li>
-      </ol>
-    </li>
-  </ol>
-</nav>
+    <!-- Hide this text on small devices -->
+    <div class="w3-col m6 w3-hide-small w3-section">
+      <p>I want to become a Designer and also a great artist!</p>
+    </div>
+  </div>
+</div>
+
+<!-- Second Parallax Image with Portfolio Text -->
+<div class="bgimg-2 w3-display-container" id="portfolio">
+  <div class="w3-display-middle">
+    <span class="w3-xxlarge w3-text-light-grey w3-wide">GALLERY</span>
+  </div>
+</div>
+
+<!-- Container (Portfolio Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h2 class="w3-center">MY DRAWINGS</h2>
+  <p class="w3-center"><em>Here are some of my drawings<br>Follow my instagram art account for more ;) <a target="_blank" href="https://www.instagram.com/art.rite/?hl=it">@art.rite</a></em></p><br>
+
+  <!-- Responsive Grid. Four columns on tablets, laptops and desktops. Will stack on mobile devices/small screens (100% width) -->
+  <div class="w3-row-padding w3-center">
+    <div class="w3-col m3">
+      <img src="https://unsplash.it/400/300?random" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://unsplash.it/400/301?random" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://unsplash.it/400/302?random" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://unsplash.it/400/303?random" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+
+  <div class="w3-row-padding w3-center w3-section">
+    <div class="w3-col m3">
+      <img src="https://unsplash.it/400/304?random" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://unsplash.it/400/305?random" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://unsplash.it/400/306?random" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+
+    <div class="w3-col m3">
+      <img src="https://unsplash.it/400/307?random" style="width:100%" onclick="onClick(this)" class="w3-hover-opacity">
+    </div>
+  </div>
+</div>
+
+<!-- Modal for full size images on click-->
+<div id="modal01" class="w3-modal w3-black" onclick="this.style.display='none'">
+  <span class="w3-closebtn w3-hover-red w3-text-white w3-xxxlarge w3-container w3-display-topright">×</span>
+  <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
+    <img id="img01" style="max-width:100%">
+  </div>
+</div>
+
+<!-- Third Parallax Image with Portfolio Text -->
+<div class="bgimg-3 w3-display-container" id="contact">
+  <div class="w3-display-middle">
+    <h2 class="w3-xxlarge w3-text-light-grey w3-wide">CONTACT</h2>
+  </div>
+</div>
+
+<!-- Container (Contact Section) -->
+<div class="w3-content w3-container w3-padding-64">
+  <h3 class="w3-center">WHERE I LIVE</h3>
+  <p class="w3-center"><em>Now you can stalk me o.o</em></p>
+
+  <address class="w3-row w3-padding-32 w3-section">
+    <div class="w3-col m4 w3-container">
+      <!-- Add Google Maps -->
+      <div id="googleMap" class="w3-round-large"></div>
+    </div>
+    <div class="w3-col m8 w3-container w3-section">
+      <div class="w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker w3-hover-text-black" style="width:30px"></i>Varese<br>
+        <i class="fa fa-envelope w3-hover-text-black" style="width:30px"> </i> Email: virginia.braut@gmail.com<br>
+      </div>
+      <p>Leave me a comment or just say hello :3</p>
+      <div class="w3-row-padding" style="margin:0 -16px 8px -16px">
+        <div class="w3-half">
+          <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Name">
         </div>
+        <div class="w3-half">
+          <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Email">
+        </div>
+      </div>
+      <input class="w3-input w3-border w3-hover-light-grey" type="text" placeholder="Write something :b">
+      <a href="mailto:virginia.braut@gmail.com" class="w3-btn w3-section w3-right">SEND</a>
+    </div>
+  </address>
+</div>
+
+<!-- Footer -->
+<footer class="w3-center w3-dark-grey w3-padding-48 w3-hover-black cf">
+  <div class="w3-half">
+    <h5> SOCIALS :) </h5>
+    <a target="_blank" href="https://www.instagram.com/viirrgi/?hl=it">
+      <i class="fa fa-instagram fa-2x"></i>
+    </a>
+    <a target="_blank" href="https://www.behance.net/virginiabr7103">
+      <i class="fa fa-behance fa-2x"></i>
+    </a>
+  </div>
+</footer>
+  <script src='https://maps.googleapis.com/maps/api/js'></script>
+<script src='https://cdnjs.cloudflare.com/ajax/libs/smoothscroll/1.4.4/SmoothScroll.min.js'></script>
+
+
+
+    <script  src="js/index.js"></script>
+
+
+
+
+</body>
+
+</html>
