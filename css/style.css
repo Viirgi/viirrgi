@@ -97,16 +97,14 @@ i.fa {
   taransition: color 1s;
 }
 
-.fa-fire:hover {
-  color: #4a4;
+.fa-behance:hover {
+  color: #6666ff;
 }
 
-.fa-facebook:hover {
-  color: #04a;
+.fa-instagram:hover {
+  color: #ffff4d;
 }
 
-.fa-codepen:hover {
-  color: #4af;
-}
 
 #profile { vertical-align: middle; }
+
